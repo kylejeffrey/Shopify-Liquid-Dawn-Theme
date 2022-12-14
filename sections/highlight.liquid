@@ -1,0 +1,64 @@
+<div class="page-width feature-row featured_testimonial_container">
+  <div class="featured_testimonial_text_container">
+    <h1 class="featured_testimonial_title">
+      {{ section.settings.section_title }}
+    </h1>
+    <p>{{ section.settings.section_description }}</p>
+    <a
+      href="{{ section.settings.link_url }}"
+      class="btn featured_testimonial_link"
+      aria-label="Browse page: {{ section.settings.link_text }}"
+    >
+      {{- section.settings.link_text -}}
+    </a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Highlight",
+  "class": "index-section",
+  "settings": [
+    {
+      "id": "section_title",
+      "type": "text",
+      "label": "Section Title",
+      "default": "Title"
+    },
+    {
+      "id": "section_description",
+      "type": "textarea",
+      "label": "Description",
+      "default": "Additional text"
+    },
+    {
+      "id": "user_image",
+      "type": "image_picker",
+      "label": "Upload image"
+    },
+    {
+      "id": "username",
+      "type": "text",
+      "label": "Customer username",
+      "default": "Username"
+    },
+    {
+      "id": "link_url",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "link_text",
+      "type": "text",
+      "label": "Button text",
+      "default": "Go to page"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Highlight section",
+      "category": "Custom section"
+    }
+  ]
+}
+{% endschema %}
